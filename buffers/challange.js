@@ -18,9 +18,13 @@ buffer1[0] = 0x48;
 buffer1[1] = 0x69;
 buffer1[2] = 0x21;
 
-// Method: using from method to directly write into buffer
+// Method 3: using from method to directly write into buffer
 // NOTE: In this way buffer size doesn't has to be specified and the size is automatically specified
 const buffer2 = Buffer.from([0x48, 0x69, 0x21]);
+
+// Method 4: Implement buffer directly with hex method
+// NOTE: In this way, one doesn't has to specify data with "0x" as hex encoding method is already specified
+const buffer3 = Buffer.from("486921", "hex");
 
 // logging raw buffer
 console.log("buffer1 ", buffer1);
